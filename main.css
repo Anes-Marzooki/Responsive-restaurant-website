@@ -1,0 +1,139 @@
+:root {
+	--main-color: #f18329;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	min-height: 1000px;
+}
+
+.hero {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	background: url(images/bg.jpg);
+	background-size: cover;
+}
+
+.hero__content {
+	max-width: 900px;
+	text-align: center;
+}
+
+.hero__content h2 {
+	font-size: 5rem;
+	color: #fff;
+}
+
+.hero__content p {
+	font-size: 1rem;
+	color: #fff;
+}
+
+.hero__btn {
+	background-color: var(--main-color);
+	color: #fff;
+	border: none;
+	border-radius: 50px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 1em;
+	padding: 1em 1.2em;
+	margin-top: 1em;
+	transition: 0.5s;
+}
+
+.hero__btn:hover {
+	letter-spacing: 5px;
+	background-color: var(--main-color);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	padding: 40px 100px;
+	width: 100%;
+	transition: 0.5s;
+}
+
+header.fixed {
+	background-color: #fff;
+	color: var(--main-color);
+	padding: 20px 100px;
+}
+
+.brand {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+	text-decoration: none;
+	position: relative;
+}
+
+header.fixed .brand {
+	color: #111;
+}
+
+.brand::after {
+	content: '';
+	display: block;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: var(--main-color);
+	right: -20%;
+	bottom: 20%;
+	transition: 0.3s;
+}
+
+.brand:hover::after {
+	height: 80%;
+	border-radius: 0;
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+}
+
+.navigation li {
+	list-style: none;
+	margin-left: 30px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #fff;
+	transition: 0.2s;
+}
+
+.navigation a:hover {
+	color: var(--main-color);
+}
+
+header.fixed .navigation a {
+	color: #111;
+}
+
+header.fixed .navigation a:hover {
+	color: var(--main-color);
+}
+
+section {
+	padding: 100px;
+}
