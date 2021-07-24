@@ -1,0 +1,3 @@
+# Responsive template
+
+README content coming soon...
